@@ -1,4 +1,10 @@
+from webbrowser import register
+
 from django.contrib import admin
 
-# Register your models here.
-app_name='members'
+from .models import Member
+
+
+@admin.register(Member)
+class MemberAdmin(admin.ModelAdmin):
+    pass
